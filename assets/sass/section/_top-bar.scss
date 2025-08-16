@@ -1,0 +1,248 @@
+/*==========================================================================
+Top Bar
+========================================================================== */
+.header__area {
+    &-topbar {
+        display: flex;
+        align-items: center;
+        &-area {
+            background: $primary-color;
+            padding: 12px 56px;
+        }
+        &-left {
+            max-width: 70%;
+            flex: 0 0 70%;
+            padding-right: 15px;
+            padding-left: 15px;
+            &-info {
+                ul {
+                    margin-left: 300px;
+                    li {
+                        display: inline-block;
+                        margin-right: 20px;
+                        list-style: none;
+                        padding-right: 20px;
+                        border-right: 1px solid $border4;
+                        &:last-child {
+                            margin: 0;
+                        }
+                        a {
+                            color: $white;
+                            i {
+                                &::before {
+                                    position: relative;
+                                    top: 2px;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-right {
+            max-width: 30%;
+            flex: 0 0 30%;
+            padding-right: 15px;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            &-social {
+                margin-left: 50px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: -12px;
+                    left: -25px;
+                    width: 1px;
+                    height: 50px;
+                    background: $border4;
+                }
+                ul {
+                    li {
+                        display: inline-block;
+                        margin-right: 20px;
+                        list-style: none;
+                        &:last-child {
+                            margin: 0;
+                        }
+                        a {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            &-language {
+                .nice-select {
+                    background: none;
+                    border: 0;
+                    padding: 0 20px;
+                    padding-left: 0;
+                    height: 25px;
+                    line-height: 25px;
+                    transition: all 0.3s ease-out 0s;
+                    color: $white;
+                    font-size: 15px;
+                    &::after {
+                        width: 8px;
+                        height: 8px;
+                        right: 0;
+                        top: 11px;
+                        border-bottom: 2px solid $white;
+                        border-right: 2px solid $white;     
+                        transition: all 0.3s ease-out 0s;               
+                    }
+                    .list {
+                        background: $white;
+                        margin-top: 12px;     
+                        width: 130px;   
+                        transition: all 0.3s ease-out 0s;
+                        right: 0;
+                        z-index: 1000;
+                        border-radius: 0;
+                        box-shadow: 0 20px 60px $shadow;
+                    }
+                    .option {
+                        color: $heading-color;
+                        transition: all 0.3s ease-out 0s;
+                        border-bottom: 1px solid $border6;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1785px) {
+    .header__area {
+        &-topbar-area {
+            padding: 12px 60px;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .header__area {
+        &-topbar {
+            &-area {
+                background: $primary-color;
+                padding: 12px 35px;
+            }
+            &-left {
+                &-info {
+                    ul {
+                        margin-left: 250px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1084px) {
+    .header__area {
+        &-topbar {
+            &-left {
+                max-width: 60%;
+                flex: 0 0 60%;
+                padding-left: 0;
+                &-info {
+                    ul {
+                        margin-left: 0;
+                    }
+                }
+            }
+            &-right {
+                max-width: 40%;
+                flex: 0 0 40%;
+                padding-right: 0;
+                &-social {
+                    ul {
+                        li {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+@media (max-width: 767px) {
+    .header__area {
+        &-topbar {
+            display: inline-block;
+            &-area {                
+                text-align: center;
+                padding: 5px 0 0 0;
+            }
+            &-left {
+                max-width: 100%;
+                flex: 0 0 100%;
+                padding-left: 15px;
+            }
+            &-right {
+                max-width: 100%;
+                flex: 0 0 100%;
+                justify-content: center;
+                padding-right: 15px;
+                &-social {
+                    &::after {
+                        top: 0;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 440px) {
+    .header__area {
+        &-topbar {
+            &-left {
+                &-info {
+                    ul {
+                        li {
+                            display: inline-block;
+                            margin-right: 10px;
+                            padding-right: 10px;
+                            a {
+                                font-size: 14px;
+                                i {
+                                    &::before {
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-right {
+                &-social {
+                    ul {
+                        li {
+                            margin-right: 10px;
+                            a i::before {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 349px) {
+    .header__area {
+        &-topbar {
+            &-left {
+                &-info {
+                    ul {
+                        li {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

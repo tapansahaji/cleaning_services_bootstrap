@@ -1,0 +1,281 @@
+/*==========================================================================
+Team
+========================================================================== */
+.team__area {
+    background: $white;
+    &-title {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        & .subtitle-two {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &-item {
+        &-image {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                right: 0;
+                transition: all 0.5s ease-out 0s; 
+                bottom: 0;
+                width: 100%;
+                height: 0;
+                background: $heading-color;
+                opacity: 0.8;
+            }
+            &-content {
+                background: $white;
+                position: absolute;
+                bottom: 15px;
+                right: 0;
+                left: 0;
+                margin: 0 15px;
+                padding: 30px 25px;
+                &:hover{
+                    .team__area-item-image-content-social {
+                        background: $secondary-color;
+                        a i::before {
+                            color: $heading-color;
+                            border-color: $secondary-color;
+                        }
+                    }
+                }
+                h3 a {
+                    color: $heading-color;
+                }
+                p {
+                    color: $primary-color;
+                    font-family: $slab;
+                    font-weight: 500;
+                }
+                &-social {
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transition: all 0.3s ease-out 0s; 
+                    z-index: 9;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                    a { 
+                        i {
+                            &::before {
+                                border: 2px solid $border2;
+                                width: 40px;
+                                height: 40px;
+                                line-height: 35px;
+                                display: inline-block;
+                                text-align: center;
+                                border-radius: 50%;
+                                transition: all 0.3s ease-out 0s; 
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                    &-icon {
+                        position: absolute;
+                        bottom: 83px;
+                        top: auto;
+                        opacity: 0;
+                        visibility: hidden;    
+                        transition: all 0.5s ease-out 0s;    
+                        right: 0;
+                        transform: translateY(-25%); 
+                        ul {
+                            li {
+                                list-style: none;
+                                a {
+                                    i {
+                                        &::before {
+                                            background: $white;
+                                            color: $primary-color;
+                                            width: 40px;
+                                            height: 40px;
+                                            line-height: 40px;
+                                            display: inline-block;
+                                            border-radius: 50%;
+                                            text-align: center;
+                                            transition: all 0.4s ease-out 0s;
+                                            border: none;
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                    &:hover {
+                                        i {
+                                            &::before {
+                                                color: $heading-color;
+                                                background: $secondary-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .team__area-item-image-content-social-icon {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(3%);
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            .team__area-item-image {
+                &::before {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1900px) {
+	.team__area {
+		padding: 120px 50px;
+	}
+}
+@media (max-width: 1299px) {
+    .team__area {
+        &-item {
+            &-image {
+                &-content {
+                    margin: 0 15px;
+                    padding: 30px 25px;
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+	.team__area {
+		padding: 120px 15px;
+	}
+}
+
+.team__details {
+    &-left {
+        &-item {
+            background: $white;
+            padding: 40px;
+            box-shadow: 0 0 60px $shadow;
+            text-align: center;
+            &-image {
+                margin-bottom: 30px;
+                img {
+                    border-radius: 50%;
+                    border: 5px solid $primary-color;
+                }
+            }
+            &-content {
+                ul {
+                    li {
+                        list-style: none;
+                        display: inline-block;
+                        margin-right: 8px;
+                        a {
+                            i {
+                                &::before {
+                                    border: 1px solid $border1;
+                                    color: $primary-color;
+                                    width: 40px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    display: inline-block;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    transition: all 0.4s ease-out 0s;
+                                }
+                            }
+                            &:hover {
+                                i {
+                                    &::before {
+                                        color: $heading-color;
+                                        background: $secondary-color;
+                                        border-color: $secondary-color;
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-right {
+        &-item {
+            &-content {
+                h3 {
+                    font-size: 30px;
+                    line-height: 40px;
+                    margin-bottom: 5px;
+                }
+                span {
+                    font-weight: 500;
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    color: $primary-color;
+                }
+            }
+            &-skill {
+                h3 {
+                    font-size: 30px;
+                    line-height: 40px;
+                    margin-bottom: 30px;
+                }
+                &-content {
+                    position: relative;
+                    h5 {
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 500;
+                        color: $heading-color;
+                        text-transform: capitalize;
+                    }
+                }
+                &-count {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: $primary-color;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 600;
+                }
+                &-inner {
+                    width: 100%;
+                    height: 14px;
+                    margin-top: 10px;
+                    position: relative;
+                    border-radius: 2px;
+                    border: 1px solid $primary-color;
+                }
+                &-bar {
+                    height: 6px;
+                    position: absolute;
+                    width: 0;
+                    top: 3px;
+                    border-radius: 2px;
+                    left: 3px;
+                    background: $primary-color;
+                    transition: all 3.5s ease-out 0s;
+                }
+            } 
+            &-experience {
+                box-shadow: 0 0 70px $shadow;
+                padding: 30px;
+            }
+        }
+    }
+}

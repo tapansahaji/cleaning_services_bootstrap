@@ -1,0 +1,54 @@
+/*==========================================================================
+Testimonial
+========================================================================== */
+.testimonial__area {
+    &-item {
+        &-content {
+            position: relative;
+            background: $white;
+            padding: 40px 35px;
+            box-shadow: 0 0 70px $shadow;
+            i {
+                &::before {
+                    position: absolute;
+                    right: 35px;
+                    top: 55px;
+                    font-size: 90px;
+                    color: $primary-color;
+                    opacity: 0.1;
+                }
+            }
+            h3 {
+                font-size: 18px;
+                line-height: 28px;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            span {
+                font-size: 14px;
+                display: block;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            ul {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid $border6;
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    i::before {
+                        color: $secondary-color;
+                        position: initial;
+                        opacity: 1;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        img {
+            max-width: 90px;
+            margin-bottom: 20px;
+        }
+    }
+}

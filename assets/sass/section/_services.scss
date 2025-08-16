@@ -1,0 +1,189 @@
+/*==========================================================================
+Services
+========================================================================== */
+.services__area {
+    position: relative;
+    background: $white;
+    &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 120px;
+        background: $thin-bg;
+        z-index: 0;
+
+    }
+    &-title {
+        &-right  {
+            max-width: 450px;
+            margin: 0 auto;
+            margin-right: 0;
+            p {
+                margin-bottom: 15px;
+            }
+        }
+    }        
+    &-item {
+        position: relative;
+        border: 1px solid $border2;
+        padding: 35px 25px;
+        background: $white;
+        transition: all 0.3s ease-out 0s;
+        z-index: 2;
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: $primary-color;
+            z-index: -1;
+            width: 100%;
+            transition: all 0.5s ease-out 0s;
+            height: 0;
+        }
+        &-icon {
+            i {
+                &::before {
+                    font-size: 60px;
+                    color: $primary-color;
+                    transition: all 0.3s ease-out 0s;
+                }
+            }
+        }
+        &-content {
+            h3 {
+                a {
+                    color: $heading-color;
+                    display: inline-block;
+                    transition: all 0.3s ease-out 0s;
+                }
+            }
+            p {
+                transition: all 0.3s ease-out 0s;
+            }
+        }
+        a {
+            color: $heading-color;
+            position: relative;
+            display: inline-block;
+            font-family: $slab;
+            font-weight: 700;
+            transition: all 0.3s ease-out 0s;
+            i {
+                &::before {
+                    position: relative;
+                    transition: all 0.4s ease-out 0s;
+                    top: 4px;
+                    font-size: 20px;
+                    left: 6px;
+                }
+            }
+            &:hover {
+                i::before {
+                    left: 10px;                     
+                }
+            }
+        }
+        span {
+            display: inline-block;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            font-size: 60px;
+            line-height: 60px;
+            font-weight: 700;
+            color: $primary-color;
+            opacity: 0.1;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;            
+        }
+        &:hover {
+            background: none;
+            &::after {
+                height: 100%;
+            }
+            .services__area-item {
+                &-icon {
+                    i::before {
+                        color: $white;
+                    }
+                }
+                &-content {
+                    a h3 {
+                        color: $white;
+                    }
+                    p {
+                        color: $white;                    
+                    }
+                }
+            }
+            a {
+                color: $white;
+            }
+            span {
+                color: $white;
+            }
+        }
+    }
+    &-dots {
+        .services-pagination {
+            .swiper-pagination-bullet {
+                border-radius: 3px;
+                background: $primary-color;
+                width: 10px;
+                height: 6px;
+                transition: all 0.4s ease-out 0s;
+                opacity: 1;
+                margin: 0;
+                margin-right: 10px;
+                &-active {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+.services__details {
+    &-left {
+        &-content {
+            &-list {
+                p {
+                    max-width: 720px;
+                    display: flex;
+                    i::before {
+                        color: $heading-color;
+                        border: 1px solid $border6;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        display: inline-block;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin-right: 20px;
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .xl-mb-30 {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 991px) {
+    .services__area {
+        &-title {
+            &-right  {
+                text-align: left;
+                margin: 0;
+            }
+        } 
+    }
+}

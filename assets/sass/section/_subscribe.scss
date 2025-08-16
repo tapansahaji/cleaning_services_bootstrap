@@ -1,0 +1,103 @@
+/*==========================================================================
+Subscribe
+========================================================================== */
+.subscribe__area {
+    position: relative;
+    z-index: 2;
+    &-left {
+        position: relative;
+        h2 {
+            color: $white;
+            font-size: 30px;
+            line-height: 40px;
+            max-width: 390px;
+        }
+        &-shape {
+            position: absolute;
+            top: -55px;
+            left: 80px;
+            max-width: 250px;
+            z-index: 1;
+        }
+    }
+    &-right {
+        form {
+            position: relative;
+            input {
+                height: 70px;
+                line-height: 70px;
+                padding-left: 50px;
+                border: none;
+            }
+            button {
+                position: absolute;
+                top: 7px;
+                right: 10px;
+            }
+            i {
+                position: absolute;
+                font-size: 16px;
+                color: $primary-color;
+                left: 20px;
+                top: 27px;
+            }
+        }
+    }
+}
+.subscribe-p {
+    padding: 70px 50px;
+    background: $primary-color;
+    margin: 0;
+}
+@media (max-width: 991px) {
+    .subscribe__area {
+        &-left {
+            h2 {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .subscribe__area {
+        position: relative;
+        z-index: 2;
+        &-left {
+            h2 {
+                font-size: 22px;
+                line-height: 34px;
+            }
+            &-shape {
+                top: 0;
+                left: 50px;
+                max-width: 300px;
+                z-index: 0;
+            }
+        }
+        &-right {
+            form {
+                input {
+                    margin-bottom: 20px;
+                    height: 55px;
+                    line-height: 55px;
+                }
+                button {
+                    position: static;
+                    width: 100%;
+                }
+                i {
+                    top: 20px;
+                }
+                .theme-banner-btn {
+                    &:hover {
+                        color: $heading-color;	
+                    }
+                }
+            }
+        }
+    }
+    .subscribe-p {
+        padding: 50px 3px;
+    }
+}
